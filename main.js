@@ -67,6 +67,7 @@ if(nome && sobr && nivel && curso){
   cd1.href = "#"
   cd1.textContent = nome+" "+sobr+"... Ver minha conta."
   cd1.style.color = 'blue'
+  cd1.classList.add("no")
 }
 document.querySelectorAll('.no').forEach(el => {
   el.addEventListener('click',()=> {
