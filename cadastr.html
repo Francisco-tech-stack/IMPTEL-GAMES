@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+  <title>Cadastro</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #6D78FF;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button:active, button:hover {
+      background-color: #068126;
+    }
+    
+    @media (min-width: 900px) {
+      body {
+        background-color: #75A3FC;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      padding-top: 400px;
+      }
+
+      #root {
+        width: 80%;
+        margin: 40px auto;
+        background-color: #6D78FF;
+      
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.7)
+      }
+    }
+
+    #root {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form {
+      text-align: center;
+      padding-left: 10px;
+    
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      height: 27px;
+      width: 70%;
+      outline-color: #0776A3;
+      border-radius: 12px;
+      border: 1px solid black;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+
+    input[type="radio"] {
+      margin-bottom: 10px;
+    }
+
+    label {
+      margin-bottom: 10px;
+    }
+
+    button{
+      margin-top: 10px;
+      background-color: #00FF40;
+      height: 55px;
+      width: 40%;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00EE3E;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="root">
+        <form>
+          <h1>
+            Seja bem vindo!
+          </h1>
+          <h2>
+            Preencha os campos abaixo:
+          </h2>
+          <div style="text-align: left">
+            <input id="nome" type="text" placeholder="Insira seu nome" maxlength="15"/>
+            <input id="sob" type="text" placeholder="Insira seu sobrenome" maxlength="18"/>
+            <p style="font-size: 13pt">
+              Selecione sua área de formação:
+            </p>
+            <input type="radio" name="curso" value="Informática."/>
+            <label>
+              Informática.
+            </label>
+            <br/>
+            <input type="radio" name="curso" value="Electrónica"/>
+            <label>
+              Electrónica
+            </label>
+            <br/>
+            <input type="radio" name="curso" value="outro">
+            <label>
+              Outro
+            </label>
+            <p style="font-size: 13pt">
+              Seu Nível de formação.
+            </p>
+            <input type="radio" name="nivel" value="Formação Média"/>
+            <label>
+              Ensino Médio.
+            </label>
+            <br/>
+            <input type="radio" name="nivel" value="Formação Superior."/>
+            <label>
+              Ensino Superior
+            </label>
+            <br/>
+            <input type="radio" name="nivel" value="outro"/>
+            <label>
+              Outro
+            </label>
+          </div>
+          <a id="go" href="#">
+          <button onclick="send()" type="button">
+            Cadastrar-me
+          </button>
+          </a>
+        </form>
+    </root>
+        
+    
+    <script>
+     function send() {
+        let nome = document.getElementById("nome").value
+        let sob = document.getElementById("sob").value
+        console.log("nome: "+nome)
+        console.log("sobren: "+sob)
+        let curso = document.querySelector('input[name= curso]:checked')
+        let nivel = document.querySelector('input[name= nivel]:checked')
+        
+        if(!nivel || !curso || nome == "" || sob == ""){
+          
+          alert("🚨 Preencha todos os campo!")
+        }else {
+        let go = document.getElementById("go").href = 'index.html'
+          localStorage.setItem('nome',nome)
+          localStorage.setItem('sob',sob)
+          let cursoSelect = curso.value
+          let nivelSelect = nivel.value
+          localStorage.setItem('cursoSelect',cursoSelect)
+          localStorage.setItem('nivelSelect',nivelSelect)
+        }
+      }
+      
+      
+      
+      
+    </script>
+</body>
+</html>
