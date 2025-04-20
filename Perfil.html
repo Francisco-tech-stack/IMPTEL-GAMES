@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  }
+  body {
+    overflow-x: hidden;
+    background: linear-gradient(120deg, #5AAAFF, #FAFCFF);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+  }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    #nome {
+      font-size: 40pt;
+      width: 70pt;
+      height: 70pt;
+      padding-top: 6.5pt;
+      align-items: center;
+      border-radius: 50%;
+      text-align: center;
+  
+      background-color: #FFE124E6;
+      color: whitesmoke;
+    }
+    #date {
+      white-space: pre-line;
+      align-items: center;
+      justify-content: center;
+      padding: 15pt;
+      margin: 20px;
+    }
+    table {
+  
+      margin: 5px;
+      padding: 5px;
+     text-align: center;
+     width: 100%;
+    }
+    th{
+      height: 50px;
+      text-align: left;
+      width: 100vw;
+    }
+    td {
+      padding: 10px;
+      text-align: left;
+      height: 55px;
+      width: 50%;
+    }
+    .dis{
+      padding-left: 20%;
+      justify-content: center;
+      width: 30%;
+      text-align: center;
+    }
+    .circle {
+      background-color: #f3f3f3f3;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    th td div {
+      
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <section id="nome">
+      
+    </section>
+    <br>
+    <section id="date">
+      <h5>
+        <i id="ident">
+          
+        </i>
+      </h5>
+    </section>
+  </header>
+  <main>
+    <table>
+      <tr class="tt">
+        <th>
+          Desempenho Actual.📚
+        </th>
+      </tr>
+      <tr>
+        <td>
+          Quiz Electrónica⚡
+        </td>
+        <td class="dis">
+          <div class="circle">
+            0%
+          </div>
+        </td>
+        <tr>
+          <td>
+          Quiz Programação 👩‍💻
+        </td>
+        <td class="dis">
+          <div class="circle">
+            0%
+          </div>
+        </tr>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <p style="text-align: center;">
+    <a href="#">Voltar</a>
+    </p>
+  </main>
+  <br>
+  <br>
+  <footer style="text-align: center">
+    ©2025 Future now🚀,<br>
+    Todos os direitos reservados.
+  </footer>
+</body>
+<script>
+  let nome = localStorage.getItem("nome")
+  let curso = localStorage.getItem("cursoSelect")
+  let nivel = localStorage.getItem("nivelSelect")
+  let sobr = localStorage.getItem("sob")
+  let nom = document.getElementById("nome").textContent = nome[0].toUpperCase();
+  let ident = document.getElementById("ident").textContent = nome + ": " + sobr +"\n Nível de formação: "+nivel+".\n Área de formação: "+curso+".";
+  let cor = Math.floor(Math.random()*3)
+  if(cor == 1){
+    let nom = document.getElementById("nome").style.backgroundColor = "#FFE124E6";
+  }if(cor == 2){
+    let nom = document.getElementById("nome").style.backgroundColor = "#FF3333E6";
+  }if(cor == 3){
+    let nom = document.getElementById("nome").style.backgroundColor = "#1DFF00E6";
+  }
+  console.log()
+</script>
+</html>
