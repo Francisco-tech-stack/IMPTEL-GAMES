@@ -32,7 +32,7 @@ if(nome){
   
   let cd = document.getElementById("cd")
   let cd1 = document.getElementById("cd1")
-  cd.href = "#"
+  cd.href = "perfil.html"
 
 }
 //Mandando o feedback 
