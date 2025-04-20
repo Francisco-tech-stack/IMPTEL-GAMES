@@ -63,8 +63,8 @@ if(nome && sobr && nivel && curso){
   let tex = document.getElementById("tex").style.display = 'none'
   let cd = document.getElementById("cd")
   let cd1 = document.getElementById("cd1")
-  cd.href = "#"
-  cd1.href = "#"
+  cd.href = "perfil.html"
+  cd1.href = "perfil.html"
   cd1.textContent = nome+" "+sobr+"... Ver minha conta."
   cd1.style.color = 'blue'
   cd1.classList.add("no")
