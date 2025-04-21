@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Questão 3</title>
+  <style>
+    body {
+      text-align: center;
+     background:linear-gradient(120deg, #0088FF, #C4E3FF);
+   background-repeat:no-repeat;
+  background-size: cover;
+  height: 130vh;
+  
+    }
+    #r1, #r2, #r3{
+      height: 100px auto;
+      background-color:#55A2E6;
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 20px;
+    }
+    #r1:active, #r2:active, #r3:active {
+      padding: 25px;
+    
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    #barra {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      background: #FF000000;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="barra">
+    
+  </button>
+  <h1>
+    Reconhecimento de fórmulas. 🎮😊
+  </h1>
+  <main>
+    <div class="quest">
+      3. Indique a opção que apresenta as associações de resistors que você aprendeu.
+    </div>
+    <a href="4.html">
+    <div id="r1">
+      a) ASSOCIAÇÃO EM SÉRIE, PARALELO E MISTA.
+    </div>
+    </a>
+    <a href="4.html">
+    <div id="r2">
+      b) ASSOCIAÇÃO RESSONANTES E EM SÉRIE.
+    </div>
+    </a>
+    <a href="4.html">
+    <div id="r3">
+      c) ASOCIAÇÕES DEFINIDAS E INDEFINIDAS.
+    </div>
+    </a>
+  </main>
+    <fooder style="text-align: center;padding-left: 4px;paddind-rigth: 4px;padding-bottom: 5px">
+    <section style="margin-top: 100px;font-size: 12pt;font-weight: 500;font-style: italic;padding-left: 4px;paddind-rigth: 4px;padding-bottom: 6px">
+      ©2025 Visinary Minds<br>
+      Instituto Médio Privado de Tecnologia.(IMPTEL)<br/>
+      10ª Classe/Sala 14.
+    </section>
+  </fooder>
+</body>
+<script>
+let erro = localStorage.getItem('erro3');
+let acerto = localStorage.getItem('acerto3');
+let barra = document.getElementById("barra")
+  let r1 = document.getElementById("r1");
+  let r2 = document.getElementById("r2");
+  let r3 = document.getElementById("r3");
+
+r1.addEventListener('click', () => {
+  r1.style.backgroundColor = '#77FF00'
+  r2.style.backgroundColor = 'red'
+  r3.style.backgroundColor = 'red'
+  barra.style.display = 'inline-block'
+  acerto++
+  localStorage.setItem('erro4',erro)
+localStorage.setItem('acerto4',acerto)
+
+})
+r2.addEventListener('click', () => {
+  r1.style.backgroundColor = '#77FF00'
+  r2.style.backgroundColor = '#red'
+  r3.style.backgroundColor = 'red'
+  barra.style.display = 'inline-block'
+  erro++
+  localStorage.setItem('erro4',erro)
+localStorage.setItem('acerto4',acerto)
+})
+r3.addEventListener('click', () => {
+  r1.style.backgroundColor = '#77FF00'
+  r2.style.backgroundColor = 'red'
+  r3.style.backgroundColor = 'red'
+  barra.style.display = 'inline-block'
+  erro++
+  localStorage.setItem('erro4',erro)
+localStorage.setItem('acerto4',acerto)
+})
+
+</script>
+</html>

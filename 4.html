@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Questão 4</title>
+  <style>
+    body {
+      text-align: center;
+     background:linear-gradient(120deg, #0088FF, #C4E3FF);
+   background-repeat:no-repeat;
+  background-size: cover;
+  height: 140vh;
+  
+    }
+    #r1, #r2, #r3{
+      height: 100px auto;
+      background-color:#55A2E6;
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 20px;
+    }
+    #r1:active, #r2:active, #r3:active {
+      padding: 25px;
+    
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    #barra {
+      position: fixed;
+      height: 100vh;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      background: #FF000000;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="barra">
+    
+  </button>
+  <h1>
+    Teoremas e definições. 🎮😊
+  </h1>
+  <main>
+    <div class="quest">
+      4. O que ocorre na associação em série?
+    </div>
+    <a href="5.html">
+    <div id="r1">
+      a) Na Associação em paralelo, temos diferenças de corrente nos variados pontos do circuito.
+    </div>
+    </a>
+    <a href="5.html">
+    <div id="r2">
+    b) Na resistência em Série, há sobreaquecimento doa condutores devido á colisão doa electrões.
+    </div>
+    </a>
+    <a href="5.html">
+    <div id="r3">
+      c) corrente tem apenas um caminho pra percorrer, resultando na mesma tensão em todos os pontos do circuito.
+    </div>
+    </a>
+  </main>
+    <fooder style="text-align: center;padding-left: 4px;paddind-rigth: 4px;padding-bottom: 5px">
+    <section style="margin-top: 100px;font-size: 12pt;font-weight: 500;font-style: italic;padding-left: 4px;paddind-rigth: 4px;padding-bottom: 6px">
+      ©2025 Visinary Minds<br>
+      Instituto Médio Privado de Tecnologia.(IMPTEL)<br/>
+      10ª Classe/Sala 14.
+    </section>
+  </fooder>
+</body>
+<script>
+let erro = localStorage.getItem('erro4');
+let acerto = localStorage.getItem('acerto4');
+let barra = document.getElementById("barra")
+  let r1 = document.getElementById("r1");
+  let r2 = document.getElementById("r2");
+  let r3 = document.getElementById("r3");
+
+r1.addEventListener('click', () => {
+  r1.style.backgroundColor = 'red'
+  r2.style.backgroundColor = 'red'
+  r3.style.backgroundColor = '#77FF00'
+  barra.style.display = 'inline-block'
+  erro++
+  localStorage.setItem('erro5',erro)
+localStorage.setItem('acerto5',acerto)
+alert("erro: "+erro)
+})
+r2.addEventListener('click', () => {
+  r1.style.backgroundColor = 'red'
+  r2.style.backgroundColor = 'red'
+  r3.style.backgroundColor = '#77FF00'
+  barra.style.display = 'inline-block'
+  erro++
+  localStorage.setItem('erro5',erro)
+localStorage.setItem('acerto5',acerto)
+})
+r3.addEventListener('click', () => {
+  r1.style.backgroundColor = 'red'
+  r2.style.backgroundColor = 'red'
+  r3.style.backgroundColor = '#77FF00'
+  barra.style.display = 'inline-block'
+  acerto++
+  localStorage.setItem('erro5',erro)
+localStorage.setItem('acerto5',acerto)
+})
+
+</script>
+</html>
