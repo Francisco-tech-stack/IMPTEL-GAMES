@@ -27,7 +27,10 @@ login.style.borderRadius = '50px'
 login.style.fontSize = '25pt'
 login.style.fontFamily = 'Times new roman'
 login.textContent = nome[0].toUpperCase()
+  
   login.style.marginBottom = '15px';
+  let cd = document.getElementById("cd")
+  cd.href = "perfil.html"
   let text = document.getElementById("tex").style.display = 'none';
   let cd1 = document.getElementById("cd1")
   cd1.href = "perfil.html"
