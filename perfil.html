@@ -112,7 +112,7 @@
           Quiz Electrónica⚡
         </td>
         <td class="dis">
-          <div class="circle">
+          <div id="el" class="circle">
             0%
           </div>
         </td>
@@ -155,6 +155,11 @@
   }if(cor == 3){
     let nom = document.getElementById("nome").style.backgroundColor = "#1DFF00E6";
   }
+  
+  let pontos = Number(localStorage.getItem("pontos"));
+  let el = document.getElementById("el")
+  el.textContent = (pontos / 270)*100
+  el.style.background = "conic-gradient(orange 0% " + (pontos / 270)*100 + "%, #f3f3f3 "+ (pontos/270)*100 + "% 100%)"
   console.log()
 </script>
 </html>
