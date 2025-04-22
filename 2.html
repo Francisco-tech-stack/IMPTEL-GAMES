@@ -70,15 +70,15 @@
   </main>
     <fooder style="text-align: center;padding-left: 4px;paddind-rigth: 4px;padding-bottom: 5px">
     <section style="margin-top: 100px;font-size: 12pt;font-weight: 500;font-style: italic;padding-left: 4px;paddind-rigth: 4px;padding-bottom: 6px">
-      ©2025 Future now🚀🚀<br>
+      ©2025 Visinary Minds<br>
       Instituto Médio Privado de Tecnologia.(IMPTEL)<br/>
       10ª Classe/Sala 14.
     </section>
   </fooder>
 </body>
 <script>
-let erro = 0;
-let acerto = 0;
+let erro = localStorage.getItem("erro2")
+let acerto = localStorage.getItem("acerto2");
 let barra = document.getElementById("barra")
   let r1 = document.getElementById("r1");
   let r2 = document.getElementById("r2");
@@ -90,17 +90,19 @@ r1.addEventListener('click', () => {
   r3.style.backgroundColor = 'red'
   barra.style.display = 'inline-block'
   erro++
-  localStorage.setItem('erro2',erro)
-localStorage.setItem('acerto2',acerto)
+  localStorage.setItem('erro3',erro)
+localStorage.setItem('acerto3',acerto)
 })
 r2.addEventListener('click', () => {
+  
   r1.style.backgroundColor = 'red'
   r2.style.backgroundColor = '#77FF00'
   r3.style.backgroundColor = 'red'
   barra.style.display = 'inline-block'
   acerto++
-  localStorage.setItem('erro2',erro)
-localStorage.setItem('acerto2',acerto)
+  localStorage.setItem('erro3.',erro)
+  alert("acert: "+acerto)
+localStorage.setItem('acerto3',acerto)
 })
 r3.addEventListener('click', () => {
   r1.style.backgroundColor = 'red'
@@ -108,8 +110,8 @@ r3.addEventListener('click', () => {
   r3.style.backgroundColor = 'red'
   barra.style.display = 'inline-block'
   erro++
-  localStorage.setItem('erro2',erro)
-localStorage.setItem('acerto2',acerto)
+  localStorage.setItem('erro3',erro)
+localStorage.setItem('acerto3',acerto)
 })
 
 </script>
