@@ -155,11 +155,13 @@
   }if(cor == 3){
     let nom = document.getElementById("nome").style.backgroundColor = "#1DFF00E6";
   }
-  
-  let pontos = Number(localStorage.getItem("pontos"));
-  let el = document.getElementById("el")
-  el.textContent = (pontos / 270)*100
-  el.style.background = "conic-gradient(orange 0% " + (pontos / 270)*100 + "%, #f3f3f3 "+ (pontos/270)*100 + "% 100%)"
+let pontos = Number(localStorage.getItem("pontos"));
+let el = document.getElementById("el");
+let porcentagem = (pontos / 270) * 100;
+
+el.textContent = porcentagem.toFixed(1) + "%";
+el.style.background = `conic-gradient(orange 0% porcentagem{porcentagem}% 100%)`;
+
   console.log()
 </script>
 </html>
